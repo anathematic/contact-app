@@ -1,6 +1,6 @@
 <h1>Contact Us</h1>
 
-<% form_for @contact do |f| %>
+<% form_for @contact, :url => contact_index_path, :method => :post do |f| %>
   <%= render(:partial => "form", :locals => { :f => f }) %>
   <p><%= f.submit "Send Message", :disable_with => "Sending Message" %> or <%= link_to "Back to Homepage", root_path %></p>
 <% end %>
