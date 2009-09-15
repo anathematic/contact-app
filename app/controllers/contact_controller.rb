@@ -11,9 +11,9 @@ class ContactController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
 
-    if @contact.save
-      flash[:notice] = "Successfully Send Message!"
-      redirect_to contact_path(@contact)
+    if @contact.valid?
+      flash[:notice] = "Successfully Sent Message!"
+      redirect_to new_contact_path
     else
       render(:action => "new")
     end
