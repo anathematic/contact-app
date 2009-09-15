@@ -19,4 +19,6 @@ config.gem 'cucumber',    :lib => false,        :version => '>=0.3.100' unless F
 config.gem 'webrat',      :lib => false,        :version => '>=0.5.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/webrat'))
 config.gem 'rspec',       :lib => false,        :version => '>=1.2.6' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec'))
 config.gem 'rspec-rails', :lib => 'spec/rails', :version => '>=1.2.6' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
-
+config.gem "notahat-machinist", :lib => "machinist"
+config.gem "sevenwire-forgery", :lib => "forgery", :source => "http://gems.github.com"
+config.gem 'bmabey-email_spec', :lib => 'email_spec'
