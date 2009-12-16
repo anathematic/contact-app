@@ -10,7 +10,7 @@ class Notifier < ActionMailer::Base
   
   def contact_user(contact)
     subject "We've received your message"
-    from "#{APP_CONFIG[:app_name]} <#{APP_CONFIG[:app_email]}>"
+    from "Site"
     recipients account.users.first.email
     sent_on Time.now
     body :account => account
